@@ -13,6 +13,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
+@property (weak, nonatomic) IBOutlet UILabel *CurSym1;
+@property (weak, nonatomic) IBOutlet UILabel *curSym2;
+- (IBAction)testAction:(id)sender;
 
 @end
 
@@ -21,12 +24,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+   
+    
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *currencySymbol = [defaults objectForKey:@"getSym" ];
+    self.CurSym1.text = currencySymbol;
+    self.curSym2.text = currencySymbol;
+    
 }
 - (IBAction)onTap:(id)sender { // {return type} name: (type)parameter
     NSLog(@"hello"); // sys.out.println
@@ -40,8 +48,14 @@
     double tipPercentage = [percentages[self.tipControl.selectedSegmentIndex] doubleValue]; //the inside part because its an NS number object and you only want the primitive value.
     double tip = tipPercentage* bill;
     double total = bill + tip;
-    self.tipLabel.text = [NSString stringWithFormat:@"$%.2f", tip]; // this is you inputing your own thing. the 2f is for 2 dec places, f is for float value
-    self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", total];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *currencySymbol = [defaults objectForKey:@"getSym" ];
+
+    self.CurSym1.text = currencySymbol;
+    self.tipLabel.text = [NSString stringWithFormat:@"%.2f", tip]; // this is you inputing your own thing. the 2f is for 2 dec places, f is for float value
+    self.curSym2.text = currencySymbol;
+    self.totalLabel.text = [NSString stringWithFormat:@"%.2f", total];
 }
 - (IBAction)onEditingBegin:(id)sender {
     [UIView animateWithDuration:0.2 animations:^{
@@ -61,4 +75,11 @@
 }
 
 
+
+- (IBAction)currencySymbol:(id)sender {
+}
+- (IBAction)textField:(id)sender {
+}
+- (IBAction)testAction:(id)sender {
+}
 @end

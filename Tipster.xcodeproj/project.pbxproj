@@ -15,6 +15,7 @@
 		1932A0B720E2D99600DB85AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1932A0B620E2D99600DB85AB /* main.m */; };
 		1932A0C120E2D99600DB85AB /* TipsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1932A0C020E2D99600DB85AB /* TipsterTests.m */; };
 		1932A0CC20E2D99600DB85AB /* TipsterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1932A0CB20E2D99600DB85AB /* TipsterUITests.m */; };
+		1932A0DB20E30E7300DB85AB /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1932A0DA20E30E7300DB85AB /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		1932A0C720E2D99600DB85AB /* TipsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1932A0CB20E2D99600DB85AB /* TipsterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipsterUITests.m; sourceTree = "<group>"; };
 		1932A0CD20E2D99600DB85AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1932A0D920E30E7300DB85AB /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		1932A0DA20E30E7300DB85AB /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				1932A0A720E2D99400DB85AB /* AppDelegate.h */,
 				1932A0A820E2D99400DB85AB /* AppDelegate.m */,
 				1932A0AA20E2D99400DB85AB /* ViewController.h */,
+				1932A0D920E30E7300DB85AB /* SettingsViewController.h */,
+				1932A0DA20E30E7300DB85AB /* SettingsViewController.m */,
 				1932A0AB20E2D99400DB85AB /* ViewController.m */,
 				1932A0AD20E2D99400DB85AB /* Main.storyboard */,
 				1932A0B020E2D99600DB85AB /* Assets.xcassets */,
@@ -265,6 +270,7 @@
 				1932A0AC20E2D99400DB85AB /* ViewController.m in Sources */,
 				1932A0B720E2D99600DB85AB /* main.m in Sources */,
 				1932A0A920E2D99400DB85AB /* AppDelegate.m in Sources */,
+				1932A0DB20E30E7300DB85AB /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
